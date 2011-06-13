@@ -1,0 +1,295 @@
+ \documentclass[oneside,bachelor,etd]{BYUPhys}
+%\usepackage[latin1]{inputenc}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{anysize}
+\marginsize{2.5cm}{1.5cm}{1.5cm}{1.5cm}
+
+\usepackage{fancyhdr}
+  \fancyhead{}
+  \fancyhead[LO]{\slshape \rightmark}
+  \fancyhead[RO,LE]{\textbf{\thepage}}
+  \fancyhead[RE]{\slshape \leftmark}
+  \fancyfoot{}
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{\chaptername \ \thechapter \ \ #1}{}}
+  \renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
+
+\usepackage[margin=0.3in,labelfont=bf,labelsep=none]{caption}
+ \DeclareCaptionFormat{suggested}{\singlespace#1#2 #3\par\doublespace}
+ \captionsetup{format=suggested}
+
+\usepackage{cite}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{lmodern,dsfont}
+
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{url}
+\urlstyle{rm}
+
+\usepackage[bookmarksnumbered,pdfpagelabels=true,plainpages=false,colorlinks=true,
+            linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+
+\usepackage{float}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+
+\definecolor{MyGray}{rgb}{0.91,0.92,0.93}
+\usepackage{calc}
+\newsavebox{\fcolbox} \newlength{\fcolwidth}
+\newenvironment{graybox}[1][\linewidth]
+	{\setlength{\fcolwidth}{#1-2\fboxsep-2\fboxrule}%
+	 \begin{lrbox}{\fcolbox}\begin{minipage}{\fcolwidth}}
+	{\end{minipage}\end{lrbox} \noindent \colorbox{MyGray}{\usebox{\fcolbox}}}
+
+\usepackage{soul}
+\definecolor{lightgrey}{gray}{0.95}
+%==================
+
+
+
+%\usepackage{xcolor, soul}
+%\begin{document}
+%\sethlcolor{yellow}
+%\hl{Da nicht alle Kunden Lotus Notes/Domino n\"utzen, gibt es den Wunsch, auf projektbezogene Datenbanken \"uber einen Browser
+%zugreifen zu k\"onnen um sich aktiv am Entwicklungsprozess zu beteiligen. Die technischen M\"oglichkeiten ohne Lotus Notes auf Domino Applikationen
+%zuzugreifen, waren bis zum Release der Version 8.5 nicht gegeben.}
+%\end{document}
+%=================
+\usepackage{listings}
+\lstset{
+	language=C++,
+	basicstyle=\footnotesize,
+	backgroundcolor=\color{lightgrey},
+	rulesepcolor=\color{gray},
+	tabsize=2,
+	breaklines=true,
+	morekeywords={all},
+	literate=%
+{Ö}{{\"O}}1 
+{Ä}{{\"A}}1 
+{Ü}{{\"U}}1 
+{ß}{{\ss}}2 
+{ü}{{\"u}}1 
+{ä}{{\"a}}1 
+{ö}{{\"o}}1
+}
+\DeclareCaptionFont{white}{\color{white}}
+
+\renewcommand*{\lstlistingname}{Definition}
+
+%\DeclareCaptionFont{white}{\color{white}}
+%\DeclareCaptionFormat{listing}{\colorbox{gray}{#1#2#3}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+
+\definecolor{hellgrau}{gray}{.9}
+\usepackage{amssymb}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth+5.5\fboxsep}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}   
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+
+%\usepackage{nomencl}
+
+
+% ------------------------- Fill in these fields for the preliminary pages ----------------------------
+  \Year{2011}
+  \Month{March}
+  \Author{Dietmar Pichler}
+  \TitleTop{Entwicklung eines Webfähigen Templates}
+ \TitleBottom{Unter Lotus Notes/Domino 8.5}
+
+\Abstract{
+
+In dieser Arbeit wird die Erstellung einer Datenbank für die Groupware Software \linebreak Lotus Notes/Domino\textsuperscript{\copyright} beschrieben. 
+Diese Groupware Software unterstützt eine inner-\linebreak betriebliche Kommunikation zwischen den Mitarbeitern und wird genutzt um administrative sowie 
+auch projektbezogene Abwicklungen durchzuführen.
+Die Daten werden mit Lotus Notes/Domino verwaltet und in dafür speziell entwickelten Domino Datenbanken abgelegt.\newline 
+Diese Arbeit dokumentiert das Erstellen einer Vorlage, unter Verwendung der aktuellsten Entwicklungsumgebung. 
+Der Bedarf für diese Entwicklung ist von Nöten, da ein Großteil der \linebreak Datenbanken unter einer älteren Entwicklungsumgebung erstellt wurden. 
+Diese Datenbank soll als Hilfestellung dienen, um zu zeigen wie Datenbanken auf den aktuellsten Stand der unterstützten Technologien zu bringen sind.  
+Ziel ist es, bestehende Datenbanken unter der \linebreak Verwendung der neue gebotenen Elemente und Designmöglichkeiten, zu aktualisieren.\newline
+\newline
+\textbf{Schlüsselwörter: }Lotus Notes, Datenbanken, Lotus Domino, Design-Elemente, XPages;
+
+\vspace{1.5cm}
+
+This thesis describes the development of a database for the groupware software Lotus Notes/Domino\textsuperscript{\copyright}.
+This groupware is used to support the communication in a company as well as for administrative and project related executions.
+Within Lotus Notes/Domino the data will be maintained and stored in specially developed domino databases.
+This thesis deals with the development of a template which is using the latest design environment.
+The template is needed because most of the already existing databases were created with an outdated design environment.
+Therefore, this template can be used to convey existing databases into the\linebreak latest supported technologies. 
+Because of the fact that the latest available layout and properties should be supported, this documentation describes which steps to follow to
+reach this goal.\newline
+\newline
+\textbf{keywords: }Lotus Notes, databases, Lotus Domino, Design Elements, XPages;
+}
+
+% ------------- These remaining fields are only necessary for masters and PhD ----------------------
+
+\begin{document}
+
+ % Start page counting in roman numerals
+ \frontmatter
+
+%\input{title}
+%\input{eidesstatth}
+
+ % This command makes the formal preliminary pages.
+ % You can comment it out during the drafting process if you want to save paper.
+\makepreliminarypages
+
+ \singlespace
+
+ % Make the table of contents.
+ \tableofcontents
+ \clearemptydoublepage
+
+ % Make the list of figures
+ \listoffigures
+ \clearemptydoublepage
+
+ \doublespace
+
+ % Start regular page counting at page 1
+ \mainmatter
+
+% --------------------------------------------------------------------------
+
+\input{einleitung}
+
+% --------------------------------------------------------------------------
+
+\input{allgemein}
+
+%--------------------------------------------------------------------------
+
+\input{designelemente}
+
+% --------------------------------------------------------------------------
+
+\input{ausblick}
+
+%--------------------------------------------------------------------------
+% Start labeling chapters with letters and calling them appendices
+%----------------------------------abkürzungsverzeichnis-----------------------------------
+
+\appendix
+\cleardoublepage
+ \phantomsection \addcontentsline{toc}{chapter}{Abk\"urzungsverzeichnis}
+\chapter*{Abk\"urzungsverzeichnis}
+
+
+\newcommand{\tabline}[1]{\parbox{60mm}{$ #1 $~\null}}
+
+\begin{tabbing}
+\tabline{AJAX} \= Asynchronous Javascript and XML\\
+\tabline{DTD} \= Document Type Definition \\
+\tabline{DOM} \= Document Object Model \\
+\tabline{GUI} \= Graphical User Interface \\
+\tabline{HTML} \= Hypertext Markup Language \\
+\tabline{HTTP} \= Hypertext Transfer Protocol \\
+\tabline{IDE} \= Integrated Design Environment \\
+\tabline{IMAP4} \= Internet Message Access Protocol Version 4 \\
+\tabline{IP} \= Internet Protocol \\
+\tabline{JSF} \= Java Server Face \\
+\tabline{NRPC} \= Notes Remote Procedure Call \\
+\tabline{NSF} \= Notes Storage Facility \\
+\tabline{OLE} \= Object Linking and Embedding \\
+\tabline{PIM} \= Personal Information Manager \\
+\tabline{POP3} \= Post Office Protocol Version 3 \\
+\tabline{TCP} \= Transmission Control Protocol \\
+\tabline{URL} \= Uniform Resource Locator \\
+\tabline{W3C} \= World Wide Web Consortium \\
+\tabline{XML} \= Extensible Markup Language \\
+		
+\end{tabbing}
+
+ % -----------------------Make the bibliography-------------------------------
+\cleardoublepage
+ \phantomsection \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+ \begin{thebibliography}{00}
+
+%======geordnet=======
+
+
+\bibitem{donelly}
+Donelly, Martin, Marc Wallace und Tony McGuckin: {\em Mastering XPages}, Indiana/U.S. , 2011.
+
+\bibitem{ebel}
+Ebel, Nadin: {\em Lotus Notes Domino 8/8.5-Administration, Band 1}, München, 2010.
+
+\bibitem{jendryschik}
+Jendryschik, Michael: {\em Einführung in XHTML, CSS und Webdesign}, 2.Auflage, München, 2009.
+
+\bibitem{knaepper}
+Knäpper, Matthias, Perc Primoz und Volker Perplies: {\em Anwendungsentwicklung unter Lotus Notes/Domino 5}, München, 2000.
+
+\bibitem{lassmann}
+Lassmann, Wolfgang: {\em Wirtschaftsinformatik-Nachschlagewerk für Studium und Praxis}, 1.Auflage, Wiesbaden, 2006.
+
+\bibitem{mann}
+Mann, Raimund: {\em Domino Designer R5}, Vaterstetten, 1999.
+
+\bibitem{marinschek}
+Marinschek, Martin, Michael Kurz und Gerald Müllan: {\em Java Server Faces 2.0}, 2.Auflage, Heidelberg, 2010.
+
+\bibitem{mccoy}
+McCoy, Cate: {\em Application Development}, Alameda/CA, U.S., 2001.
+
+\bibitem{messerschmidt}
+Messerschmidt, Christian M., Sven C. Berger und Bernd Skiera: {\em Web 2.0 im Retail Banking}, 1.Auflage, Wiesbaden, 2010.
+
+\bibitem{metzler}
+Metzler, Susann: {\em Groupware Systeme}, 1.Auflage, Norderstedt, 2002.
+
+\bibitem{muhs/klatt}
+Muhs, Thomas und Boerries Klatt: {\em Notes/Domino 5: Einführung in die LotusScript-Programmierung}, München, 2000.
+
+\bibitem{schicker}
+Schicker, Edwin: {\em Datenbanken und SQL}, 3.Auflage, Stuttgart/Leipzig/Wiesbaden, 2000.
+
+\bibitem{steiner}
+Steiner, Rene: {\em Grundkurs relationale Datenbanken}, 7.Auflage, Wiesbaden, 2009.
+
+\bibitem{steyer}
+Steyer, Ralph: {\em AJAX Frameworks-RIAs mit Dojo und Co}, München, 2008.
+
+\bibitem{tag}
+{\em Was ist ein tag.} Berlin: Abteilung Pädagogik und Informatik der Humboldt-Universität [ Format: HTML, Zeit: 04.05.2011, 
+Adresse: http://www.educat.hu\-berlin.de/kurse/kurs20/wasisttag.html ].
+
+\bibitem{imap}  
+{\em Was ist IMAP4.} Graz: Edis GmbH [ Format: HTML, Zeit: 04.05.2011, Adresse: http://www.edis.at/was-ist-imap4\_50\_16.htm ]. 
+
+\bibitem{pop}  
+{\em Was ist POP3.} Wien: CSOFT Allerstorfer und Radl OEG [ Format: HTML, Zeit: 04.05.2011, Adresse: http://www.wiki.csoft.at/index.php/Was\_ist\_POP3 ]. 
+
+\bibitem{wind}
+Wind, Martin und Detlef Kröger: {\em Handbuch IT in der Verwaltung}, Heidelberg, 2006.
+
+ \end{thebibliography}
+\end{document}

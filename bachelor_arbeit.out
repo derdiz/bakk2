@@ -1,0 +1,39 @@
+\BOOKMARK [0][-]{bm:Abstract.0}{Abstract}{}% 1
+\BOOKMARK [0][-]{section*.1}{Inhaltsverzeichnis}{}% 2
+\BOOKMARK [0][-]{section*.3}{Abbildungsverzeichnis}{}% 3
+\BOOKMARK [0][-]{chapter.1}{1 Einleitung}{}% 4
+\BOOKMARK [1][-]{section.1.1}{1.1 Allgemeines}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{1.2 Aufgabenstellung}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{2 Einf\374hrung in Lotus Notes/Domino}{}% 7
+\BOOKMARK [1][-]{section.2.1}{2.1 Was ist Lotus Notes/Domino?}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{2.2 Domino Designer-Kurz\374berblick}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{2.3 Server/Client-Prinzip}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Notes Client}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Domino-Server}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Domino-Administrator}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{2.4 Domino-Datenbank}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Allgemeine Beschreibung}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Datenbankarchitektur}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.3}{2.4.3 Datenbank-Informationen}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.4}{2.4.4 Zugriffs-M\366glichkeiten auf eine Domino-Datenbank}{section.2.4}% 18
+\BOOKMARK [0][-]{chapter.3}{3 Design einer Datenbank}{}% 19
+\BOOKMARK [1][-]{section.3.1}{3.1 Domino Designer 8.5}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{3.2 Details der XPages Design-Elemente}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Informationen zu Design-Elementen}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Masken \(Forms\)}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Ansichten \(Views\)}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 XPages}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.5}{3.2.5 Custom Controls}{section.3.2}% 26
+\BOOKMARK [1][-]{section.3.3}{3.3 Unterst\374tzte Programmiersprachen}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Formelsprache}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 LotusScript}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 JavaScript}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Java}{section.3.3}% 31
+\BOOKMARK [1][-]{section.3.4}{3.4 Template}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Anforderungen}{section.3.4}% 33
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Virtueller Server}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Template-Realisierung}{section.3.4}% 35
+\BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 Fehlermeldungen}{section.3.4}% 36
+\BOOKMARK [0][-]{chapter.4}{4 M\366gliche Weiterentwicklung}{}% 37
+\BOOKMARK [0][-]{section*.38}{Abk\374rzungsverzeichnis}{}% 38
+\BOOKMARK [0][-]{section*.40}{Literaturverzeichnis}{}% 39
